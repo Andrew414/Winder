@@ -29,11 +29,64 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Location = new System.Drawing.Point(1, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(222, 226);
+            this.panel1.TabIndex = 0;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Location = new System.Drawing.Point(1, 230);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(222, 268);
+            this.panel2.TabIndex = 0;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(456, 157);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(128, 128);
+            this.panel3.TabIndex = 1;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // WinderMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.ClientSize = new System.Drawing.Size(768, 499);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Name = "WinderMain";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Timer timer1;
+
     }
 }
 
