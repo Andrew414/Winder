@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WFSystem
 {
-    public partial class Form1 : Form
+    public partial class WinderMain : Form
     {
-        public Form1()
+        public WinderMain()
         {
             InitializeComponent();
         }

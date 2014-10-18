@@ -1,6 +1,6 @@
 ﻿namespace WFSystem
 {
-    partial class Form1
+    partial class WinderMain
     {
         /// <summary>
         /// Required designer variable.
