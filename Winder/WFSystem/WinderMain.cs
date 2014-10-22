@@ -25,6 +25,8 @@ namespace WFSystem
             state.rotor = new Rotor();
 
             state.generator.State = state.panel.State = state.rotor.State = sim.state = state;
+
+            timer1_Tick(null, null);
         }
 
         private void panel1_Click(object sender, EventArgs e)
@@ -142,7 +144,7 @@ namespace WFSystem
 
         private void btnFire_Click(object sender, EventArgs e)
         {
-            sim.state.generator.ActivateFireSystem();
+            sim.state.panel.StartFireSystem();
         }
 
         private void lblGeneratorTemp_DoubleClick(object sender, EventArgs e)
@@ -152,13 +154,12 @@ namespace WFSystem
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            sim.state.rotor.Stop();
+            sim.state.panel.LockRotor();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            sim.state.rotor.Start();
-            sim.state.generator.Start();
+            sim.state.panel.StartGenerator();
         }
     }
 }

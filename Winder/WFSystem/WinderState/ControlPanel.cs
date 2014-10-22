@@ -10,26 +10,22 @@ namespace WFSystem.WinderState
     {
         public GlobalState State { get; set; }
 
-        /*public Boolean RotorStoppedIndicator { get; set; }
-        public Boolean GeneratorStoppedIndicator { get; set; }
-        public Boolean FireSystemActivatedIndicator { get; set; }
-
-        public Boolean WarmingSystemActivated { get; set; }
-        public Boolean BrakingSystemActivated { get; set; }*/
 
         public Boolean StartGenerator()
         {
-            return true;
+            if (State.rotor.Start() && State.generator.Start()) return true;
+            return false;
         }
 
         public Boolean StartFireSystem()
         {
-            return true;
+            return State.generator.ActivateFireSystem();
         }
 
         public Boolean LockRotor()
         {
-            return true;
+            return State.rotor.Stop();
+            
         }
     }
 }
