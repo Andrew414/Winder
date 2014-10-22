@@ -29,14 +29,7 @@ namespace WFSystem
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            if (tmrUpdateUI.Enabled)
-            {
-                tmrUpdateUI.Stop();
-            }
-            else
-            {
-                tmrUpdateUI.Start();
-            }
+            
         }
 
         int timerState = 0;
@@ -99,6 +92,20 @@ namespace WFSystem
             pnlCplFire.BackgroundImage = Image.FromFile(@"..\..\img\system" + (sim.state.generator.FireSystemActive ? "alarm" : "inactive") + "16.png");
             pnlCplGenOff.BackgroundImage = Image.FromFile(@"..\..\img\system" + (sim.state.generator.Active ? "inactive" : "alarm") + "16.png");
             pnlCplHeater.BackgroundImage = Image.FromFile(@"..\..\img\system" + (sim.state.rotor.heaterEnabled ? "active" : "inactive") + "16.png");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (tmrUpdateUI.Enabled)
+            {
+                tmrUpdateUI.Stop();
+                btnModelStartStop.Text = "Старт!";
+            }
+            else
+            {
+                tmrUpdateUI.Start();
+                btnModelStartStop.Text = "Стоп!";
+            }
         }
     }
 }
