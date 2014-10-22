@@ -88,5 +88,16 @@ namespace WFSystem.WinderState
 
             return true;
         }
+
+        public Rotor()
+        {
+            heaterEnabled = false;
+            brakeEnabled = false;
+
+            Active = true;
+
+            temperature = 10;
+            speed = 2.0;
+        }
     }
 }

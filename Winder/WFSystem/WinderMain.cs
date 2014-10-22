@@ -55,12 +55,12 @@ namespace WFSystem
             // Draw common info
             DrawStats();
             lblValueWindIntensity.Text = sim.state.env.WindSpeed.ToString() + " м/с";
-            lblValueWindDirection.Text = "NW";
+            lblValueWindDirection.Text = sim.state.env.WindDirection;
 
             // Draw rotor
             pnlRotor.BackgroundImage = Image.FromFile(@"..\..\img\blade" + animationState.ToString() + (sim.state.rotor.Active ? "" : "d") + ".png");
             lblRotorSpeed.Text = "ω = " + ((int)(60 * sim.state.rotor.speed)).ToString() + " оборотов в минуту";
-            lblOutdoorTemp.Text = "t = " + sim.state.rotor.temperature.ToString() + " °C";
+            lblOutdoorTemp.Text = "t = " + ((Math.Round(sim.state.rotor.temperature,1))).ToString() + " °C";
 
             pnlIndBrake.BackgroundImage = Image.FromFile(@"..\..\img\system" + (sim.state.rotor.brakeEnabled ? "" : "in") + "active.png");
             pnlIndHeater.BackgroundImage = Image.FromFile(@"..\..\img\system" + (sim.state.rotor.heaterEnabled ? "" : "in") + "active.png");
@@ -84,7 +84,7 @@ namespace WFSystem
                 pnlWater.BackgroundImage = Image.FromFile(@"..\..\img\water0.png");
             }
 
-            lblGeneratorTemp.Text = "t = " + sim.state.generator.temperature.ToString() + " °C";
+            lblGeneratorTemp.Text = "t = " + ((Math.Round(sim.state.generator.temperature, 0))) + " °C";
 
             // Draw panel
             pnlCplBlock.BackgroundImage = Image.FromFile(@"..\..\img\system" + (sim.state.rotor.Active ? "inactive" : "alarm") + "16.png");
@@ -106,6 +106,31 @@ namespace WFSystem
                 tmrUpdateUI.Start();
                 btnModelStartStop.Text = "Стоп!";
             }
+        }
+
+        private void numWind_ValueChanged(object sender, EventArgs e)
+        {
+            sim.state.env.WindSpeedAvg = (double) numWind.Value;
+        }
+
+        private void rbnN_CheckedChanged(object sender, EventArgs e)
+        {
+            sim.state.env.WindDirection = (sender as RadioButton).Text;
+        }
+
+        private void numTemp_ValueChanged(object sender, EventArgs e)
+        {
+            sim.state.env.Temperature = (double)numTemp.Value;
+        }
+
+        private void btnModelFire_Click(object sender, EventArgs e)
+        {
+            sim.state.generator.temperature = 600;
+        }
+
+        private void btnTornado_Click(object sender, EventArgs e)
+        {
+            sim.state.env.WindSpeed = 35;
         }
     }
 }

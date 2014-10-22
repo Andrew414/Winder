@@ -29,5 +29,12 @@ namespace WFSystem.WinderState
         {
             return true;
         }
+
+        public Generator()
+        {
+            Active = true;
+            FireSystemActive = false;
+            temperature = 180;
+        }
     }
 }

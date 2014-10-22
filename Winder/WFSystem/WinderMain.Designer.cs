@@ -47,6 +47,24 @@
             this.lblCplHeater = new System.Windows.Forms.Label();
             this.lblCplBrake = new System.Windows.Forms.Label();
             this.pnlEnvironment = new System.Windows.Forms.Panel();
+            this.btnModelStartStop = new System.Windows.Forms.Button();
+            this.btnModelFire = new System.Windows.Forms.Button();
+            this.gbxTemp = new System.Windows.Forms.GroupBox();
+            this.lblCelsius = new System.Windows.Forms.Label();
+            this.numTemp = new System.Windows.Forms.NumericUpDown();
+            this.gbxWind = new System.Windows.Forms.GroupBox();
+            this.rbnSE = new System.Windows.Forms.RadioButton();
+            this.rbnE = new System.Windows.Forms.RadioButton();
+            this.rbnNE = new System.Windows.Forms.RadioButton();
+            this.rbnS = new System.Windows.Forms.RadioButton();
+            this.rbnSW = new System.Windows.Forms.RadioButton();
+            this.rbnW = new System.Windows.Forms.RadioButton();
+            this.rbnN = new System.Windows.Forms.RadioButton();
+            this.rbnNW = new System.Windows.Forms.RadioButton();
+            this.lblDirections = new System.Windows.Forms.Label();
+            this.lblMeterSeconds = new System.Windows.Forms.Label();
+            this.numWind = new System.Windows.Forms.NumericUpDown();
+            this.lblModel = new System.Windows.Forms.Label();
             this.tmrUpdateUI = new System.Windows.Forms.Timer(this.components);
             this.lblBrakeSystem = new System.Windows.Forms.Label();
             this.lblHeater = new System.Windows.Forms.Label();
@@ -67,34 +85,17 @@
             this.pnlWater = new System.Windows.Forms.Panel();
             this.pnlRotor = new System.Windows.Forms.Panel();
             this.pnlCord = new System.Windows.Forms.Panel();
-            this.lblModel = new System.Windows.Forms.Label();
-            this.gbxWind = new System.Windows.Forms.GroupBox();
-            this.gbxTemp = new System.Windows.Forms.GroupBox();
-            this.gbxFire = new System.Windows.Forms.GroupBox();
-            this.btnModelFire = new System.Windows.Forms.Button();
-            this.numTemp = new System.Windows.Forms.NumericUpDown();
-            this.lblCelsius = new System.Windows.Forms.Label();
-            this.numWind = new System.Windows.Forms.NumericUpDown();
-            this.lblMeterSeconds = new System.Windows.Forms.Label();
-            this.rbnNW = new System.Windows.Forms.RadioButton();
-            this.rbnN = new System.Windows.Forms.RadioButton();
-            this.rbnNE = new System.Windows.Forms.RadioButton();
-            this.rbnW = new System.Windows.Forms.RadioButton();
-            this.rbnE = new System.Windows.Forms.RadioButton();
-            this.rbnSW = new System.Windows.Forms.RadioButton();
-            this.rbnS = new System.Windows.Forms.RadioButton();
-            this.rbnSE = new System.Windows.Forms.RadioButton();
-            this.lblDirections = new System.Windows.Forms.Label();
-            this.btnModelStartStop = new System.Windows.Forms.Button();
+            this.gbxBad = new System.Windows.Forms.GroupBox();
+            this.btnTornado = new System.Windows.Forms.Button();
             this.pnlControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStatGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStatRose)).BeginInit();
             this.pnlEnvironment.SuspendLayout();
-            this.gbxWind.SuspendLayout();
             this.gbxTemp.SuspendLayout();
-            this.gbxFire.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTemp)).BeginInit();
+            this.gbxWind.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numWind)).BeginInit();
+            this.gbxBad.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlControl
@@ -279,14 +280,239 @@
             // 
             this.pnlEnvironment.BackColor = System.Drawing.SystemColors.Control;
             this.pnlEnvironment.Controls.Add(this.btnModelStartStop);
-            this.pnlEnvironment.Controls.Add(this.gbxFire);
+            this.pnlEnvironment.Controls.Add(this.gbxBad);
             this.pnlEnvironment.Controls.Add(this.gbxTemp);
             this.pnlEnvironment.Controls.Add(this.gbxWind);
             this.pnlEnvironment.Controls.Add(this.lblModel);
             this.pnlEnvironment.Location = new System.Drawing.Point(1, 323);
             this.pnlEnvironment.Name = "pnlEnvironment";
-            this.pnlEnvironment.Size = new System.Drawing.Size(839, 178);
+            this.pnlEnvironment.Size = new System.Drawing.Size(839, 196);
             this.pnlEnvironment.TabIndex = 0;
+            // 
+            // btnModelStartStop
+            // 
+            this.btnModelStartStop.Location = new System.Drawing.Point(696, 152);
+            this.btnModelStartStop.Name = "btnModelStartStop";
+            this.btnModelStartStop.Size = new System.Drawing.Size(136, 40);
+            this.btnModelStartStop.TabIndex = 4;
+            this.btnModelStartStop.Text = "Старт!";
+            this.btnModelStartStop.UseVisualStyleBackColor = true;
+            this.btnModelStartStop.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnModelFire
+            // 
+            this.btnModelFire.BackColor = System.Drawing.Color.Red;
+            this.btnModelFire.Location = new System.Drawing.Point(25, 54);
+            this.btnModelFire.Name = "btnModelFire";
+            this.btnModelFire.Size = new System.Drawing.Size(95, 28);
+            this.btnModelFire.TabIndex = 5;
+            this.btnModelFire.Text = "ПОЖАР";
+            this.btnModelFire.UseVisualStyleBackColor = false;
+            this.btnModelFire.Click += new System.EventHandler(this.btnModelFire_Click);
+            // 
+            // gbxTemp
+            // 
+            this.gbxTemp.Controls.Add(this.lblCelsius);
+            this.gbxTemp.Controls.Add(this.numTemp);
+            this.gbxTemp.Location = new System.Drawing.Point(187, 45);
+            this.gbxTemp.Name = "gbxTemp";
+            this.gbxTemp.Size = new System.Drawing.Size(134, 50);
+            this.gbxTemp.TabIndex = 3;
+            this.gbxTemp.TabStop = false;
+            this.gbxTemp.Text = "Температура";
+            // 
+            // lblCelsius
+            // 
+            this.lblCelsius.AutoSize = true;
+            this.lblCelsius.Location = new System.Drawing.Point(102, 21);
+            this.lblCelsius.Name = "lblCelsius";
+            this.lblCelsius.Size = new System.Drawing.Size(18, 13);
+            this.lblCelsius.TabIndex = 1;
+            this.lblCelsius.Text = "°C";
+            // 
+            // numTemp
+            // 
+            this.numTemp.Location = new System.Drawing.Point(17, 19);
+            this.numTemp.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numTemp.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.numTemp.Name = "numTemp";
+            this.numTemp.Size = new System.Drawing.Size(79, 20);
+            this.numTemp.TabIndex = 0;
+            this.numTemp.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numTemp.ValueChanged += new System.EventHandler(this.numTemp_ValueChanged);
+            // 
+            // gbxWind
+            // 
+            this.gbxWind.Controls.Add(this.rbnSE);
+            this.gbxWind.Controls.Add(this.rbnE);
+            this.gbxWind.Controls.Add(this.rbnNE);
+            this.gbxWind.Controls.Add(this.rbnS);
+            this.gbxWind.Controls.Add(this.rbnSW);
+            this.gbxWind.Controls.Add(this.rbnW);
+            this.gbxWind.Controls.Add(this.rbnN);
+            this.gbxWind.Controls.Add(this.rbnNW);
+            this.gbxWind.Controls.Add(this.lblDirections);
+            this.gbxWind.Controls.Add(this.lblMeterSeconds);
+            this.gbxWind.Controls.Add(this.numWind);
+            this.gbxWind.Location = new System.Drawing.Point(24, 45);
+            this.gbxWind.Name = "gbxWind";
+            this.gbxWind.Size = new System.Drawing.Size(157, 143);
+            this.gbxWind.TabIndex = 3;
+            this.gbxWind.TabStop = false;
+            this.gbxWind.Text = "Ветер";
+            // 
+            // rbnSE
+            // 
+            this.rbnSE.AutoSize = true;
+            this.rbnSE.Location = new System.Drawing.Point(102, 119);
+            this.rbnSE.Name = "rbnSE";
+            this.rbnSE.Size = new System.Drawing.Size(39, 17);
+            this.rbnSE.TabIndex = 2;
+            this.rbnSE.Text = "SE";
+            this.rbnSE.UseVisualStyleBackColor = true;
+            this.rbnSE.CheckedChanged += new System.EventHandler(this.rbnN_CheckedChanged);
+            // 
+            // rbnE
+            // 
+            this.rbnE.AutoSize = true;
+            this.rbnE.Location = new System.Drawing.Point(102, 96);
+            this.rbnE.Name = "rbnE";
+            this.rbnE.Size = new System.Drawing.Size(32, 17);
+            this.rbnE.TabIndex = 2;
+            this.rbnE.Text = "E";
+            this.rbnE.UseVisualStyleBackColor = true;
+            this.rbnE.CheckedChanged += new System.EventHandler(this.rbnN_CheckedChanged);
+            // 
+            // rbnNE
+            // 
+            this.rbnNE.AutoSize = true;
+            this.rbnNE.Location = new System.Drawing.Point(102, 73);
+            this.rbnNE.Name = "rbnNE";
+            this.rbnNE.Size = new System.Drawing.Size(40, 17);
+            this.rbnNE.TabIndex = 2;
+            this.rbnNE.Text = "NE";
+            this.rbnNE.UseVisualStyleBackColor = true;
+            this.rbnNE.CheckedChanged += new System.EventHandler(this.rbnN_CheckedChanged);
+            // 
+            // rbnS
+            // 
+            this.rbnS.AutoSize = true;
+            this.rbnS.Location = new System.Drawing.Point(60, 119);
+            this.rbnS.Name = "rbnS";
+            this.rbnS.Size = new System.Drawing.Size(32, 17);
+            this.rbnS.TabIndex = 2;
+            this.rbnS.Text = "S";
+            this.rbnS.UseVisualStyleBackColor = true;
+            this.rbnS.CheckedChanged += new System.EventHandler(this.rbnN_CheckedChanged);
+            // 
+            // rbnSW
+            // 
+            this.rbnSW.AutoSize = true;
+            this.rbnSW.Location = new System.Drawing.Point(9, 119);
+            this.rbnSW.Name = "rbnSW";
+            this.rbnSW.Size = new System.Drawing.Size(43, 17);
+            this.rbnSW.TabIndex = 2;
+            this.rbnSW.Text = "SW";
+            this.rbnSW.UseVisualStyleBackColor = true;
+            this.rbnSW.CheckedChanged += new System.EventHandler(this.rbnN_CheckedChanged);
+            // 
+            // rbnW
+            // 
+            this.rbnW.AutoSize = true;
+            this.rbnW.Location = new System.Drawing.Point(9, 96);
+            this.rbnW.Name = "rbnW";
+            this.rbnW.Size = new System.Drawing.Size(36, 17);
+            this.rbnW.TabIndex = 2;
+            this.rbnW.Text = "W";
+            this.rbnW.UseVisualStyleBackColor = true;
+            this.rbnW.CheckedChanged += new System.EventHandler(this.rbnN_CheckedChanged);
+            // 
+            // rbnN
+            // 
+            this.rbnN.AutoSize = true;
+            this.rbnN.Checked = true;
+            this.rbnN.Location = new System.Drawing.Point(60, 73);
+            this.rbnN.Name = "rbnN";
+            this.rbnN.Size = new System.Drawing.Size(33, 17);
+            this.rbnN.TabIndex = 2;
+            this.rbnN.TabStop = true;
+            this.rbnN.Text = "N";
+            this.rbnN.UseVisualStyleBackColor = true;
+            this.rbnN.CheckedChanged += new System.EventHandler(this.rbnN_CheckedChanged);
+            // 
+            // rbnNW
+            // 
+            this.rbnNW.AutoSize = true;
+            this.rbnNW.Location = new System.Drawing.Point(9, 73);
+            this.rbnNW.Name = "rbnNW";
+            this.rbnNW.Size = new System.Drawing.Size(44, 17);
+            this.rbnNW.TabIndex = 2;
+            this.rbnNW.Text = "NW";
+            this.rbnNW.UseVisualStyleBackColor = true;
+            this.rbnNW.CheckedChanged += new System.EventHandler(this.rbnN_CheckedChanged);
+            // 
+            // lblDirections
+            // 
+            this.lblDirections.AutoSize = true;
+            this.lblDirections.Location = new System.Drawing.Point(6, 50);
+            this.lblDirections.Name = "lblDirections";
+            this.lblDirections.Size = new System.Drawing.Size(78, 13);
+            this.lblDirections.TabIndex = 1;
+            this.lblDirections.Text = "Направление:";
+            // 
+            // lblMeterSeconds
+            // 
+            this.lblMeterSeconds.AutoSize = true;
+            this.lblMeterSeconds.Location = new System.Drawing.Point(98, 21);
+            this.lblMeterSeconds.Name = "lblMeterSeconds";
+            this.lblMeterSeconds.Size = new System.Drawing.Size(26, 13);
+            this.lblMeterSeconds.TabIndex = 1;
+            this.lblMeterSeconds.Text = "м/с";
+            // 
+            // numWind
+            // 
+            this.numWind.Location = new System.Drawing.Point(6, 19);
+            this.numWind.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numWind.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numWind.Name = "numWind";
+            this.numWind.Size = new System.Drawing.Size(79, 20);
+            this.numWind.TabIndex = 0;
+            this.numWind.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numWind.ValueChanged += new System.EventHandler(this.numWind_ValueChanged);
+            // 
+            // lblModel
+            // 
+            this.lblModel.AutoSize = true;
+            this.lblModel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModel.Location = new System.Drawing.Point(16, 11);
+            this.lblModel.Name = "lblModel";
+            this.lblModel.Size = new System.Drawing.Size(144, 19);
+            this.lblModel.TabIndex = 2;
+            this.lblModel.Text = "Моделирование";
             // 
             // tmrUpdateUI
             // 
@@ -469,236 +695,34 @@
             this.pnlCord.Size = new System.Drawing.Size(256, 256);
             this.pnlCord.TabIndex = 1;
             // 
-            // lblModel
+            // gbxBad
             // 
-            this.lblModel.AutoSize = true;
-            this.lblModel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModel.Location = new System.Drawing.Point(16, 11);
-            this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(144, 19);
-            this.lblModel.TabIndex = 2;
-            this.lblModel.Text = "Моделирование";
+            this.gbxBad.Controls.Add(this.btnModelFire);
+            this.gbxBad.Controls.Add(this.btnTornado);
+            this.gbxBad.Location = new System.Drawing.Point(187, 101);
+            this.gbxBad.Name = "gbxBad";
+            this.gbxBad.Size = new System.Drawing.Size(134, 87);
+            this.gbxBad.TabIndex = 3;
+            this.gbxBad.TabStop = false;
+            this.gbxBad.Text = "Аварийные ситуации";
             // 
-            // gbxWind
+            // btnTornado
             // 
-            this.gbxWind.Controls.Add(this.rbnSE);
-            this.gbxWind.Controls.Add(this.rbnE);
-            this.gbxWind.Controls.Add(this.rbnNE);
-            this.gbxWind.Controls.Add(this.rbnS);
-            this.gbxWind.Controls.Add(this.rbnSW);
-            this.gbxWind.Controls.Add(this.rbnW);
-            this.gbxWind.Controls.Add(this.rbnN);
-            this.gbxWind.Controls.Add(this.rbnNW);
-            this.gbxWind.Controls.Add(this.lblDirections);
-            this.gbxWind.Controls.Add(this.lblMeterSeconds);
-            this.gbxWind.Controls.Add(this.numWind);
-            this.gbxWind.Location = new System.Drawing.Point(24, 45);
-            this.gbxWind.Name = "gbxWind";
-            this.gbxWind.Size = new System.Drawing.Size(178, 127);
-            this.gbxWind.TabIndex = 3;
-            this.gbxWind.TabStop = false;
-            this.gbxWind.Text = "Ветер";
-            // 
-            // gbxTemp
-            // 
-            this.gbxTemp.Controls.Add(this.lblCelsius);
-            this.gbxTemp.Controls.Add(this.numTemp);
-            this.gbxTemp.Location = new System.Drawing.Point(216, 45);
-            this.gbxTemp.Name = "gbxTemp";
-            this.gbxTemp.Size = new System.Drawing.Size(134, 54);
-            this.gbxTemp.TabIndex = 3;
-            this.gbxTemp.TabStop = false;
-            this.gbxTemp.Text = "Температура";
-            // 
-            // gbxFire
-            // 
-            this.gbxFire.Controls.Add(this.btnModelFire);
-            this.gbxFire.Location = new System.Drawing.Point(216, 105);
-            this.gbxFire.Name = "gbxFire";
-            this.gbxFire.Size = new System.Drawing.Size(134, 67);
-            this.gbxFire.TabIndex = 3;
-            this.gbxFire.TabStop = false;
-            this.gbxFire.Text = "Пожар";
-            // 
-            // btnModelFire
-            // 
-            this.btnModelFire.BackColor = System.Drawing.Color.Red;
-            this.btnModelFire.Location = new System.Drawing.Point(25, 24);
-            this.btnModelFire.Name = "btnModelFire";
-            this.btnModelFire.Size = new System.Drawing.Size(95, 28);
-            this.btnModelFire.TabIndex = 5;
-            this.btnModelFire.Text = "ПОЖАР";
-            this.btnModelFire.UseVisualStyleBackColor = false;
-            // 
-            // numTemp
-            // 
-            this.numTemp.Location = new System.Drawing.Point(17, 19);
-            this.numTemp.Maximum = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            this.numTemp.Minimum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            -2147483648});
-            this.numTemp.Name = "numTemp";
-            this.numTemp.Size = new System.Drawing.Size(79, 20);
-            this.numTemp.TabIndex = 0;
-            this.numTemp.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // lblCelsius
-            // 
-            this.lblCelsius.AutoSize = true;
-            this.lblCelsius.Location = new System.Drawing.Point(102, 21);
-            this.lblCelsius.Name = "lblCelsius";
-            this.lblCelsius.Size = new System.Drawing.Size(18, 13);
-            this.lblCelsius.TabIndex = 1;
-            this.lblCelsius.Text = "°C";
-            // 
-            // numWind
-            // 
-            this.numWind.Location = new System.Drawing.Point(6, 19);
-            this.numWind.Maximum = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            this.numWind.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numWind.Name = "numWind";
-            this.numWind.Size = new System.Drawing.Size(79, 20);
-            this.numWind.TabIndex = 0;
-            this.numWind.Value = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            // 
-            // lblMeterSeconds
-            // 
-            this.lblMeterSeconds.AutoSize = true;
-            this.lblMeterSeconds.Location = new System.Drawing.Point(98, 21);
-            this.lblMeterSeconds.Name = "lblMeterSeconds";
-            this.lblMeterSeconds.Size = new System.Drawing.Size(26, 13);
-            this.lblMeterSeconds.TabIndex = 1;
-            this.lblMeterSeconds.Text = "м/с";
-            // 
-            // rbnNW
-            // 
-            this.rbnNW.AutoSize = true;
-            this.rbnNW.Location = new System.Drawing.Point(9, 50);
-            this.rbnNW.Name = "rbnNW";
-            this.rbnNW.Size = new System.Drawing.Size(44, 17);
-            this.rbnNW.TabIndex = 2;
-            this.rbnNW.Text = "NW";
-            this.rbnNW.UseVisualStyleBackColor = true;
-            // 
-            // rbnN
-            // 
-            this.rbnN.AutoSize = true;
-            this.rbnN.Checked = true;
-            this.rbnN.Location = new System.Drawing.Point(69, 50);
-            this.rbnN.Name = "rbnN";
-            this.rbnN.Size = new System.Drawing.Size(33, 17);
-            this.rbnN.TabIndex = 2;
-            this.rbnN.TabStop = true;
-            this.rbnN.Text = "N";
-            this.rbnN.UseVisualStyleBackColor = true;
-            // 
-            // rbnNE
-            // 
-            this.rbnNE.AutoSize = true;
-            this.rbnNE.Location = new System.Drawing.Point(129, 50);
-            this.rbnNE.Name = "rbnNE";
-            this.rbnNE.Size = new System.Drawing.Size(40, 17);
-            this.rbnNE.TabIndex = 2;
-            this.rbnNE.Text = "NE";
-            this.rbnNE.UseVisualStyleBackColor = true;
-            // 
-            // rbnW
-            // 
-            this.rbnW.AutoSize = true;
-            this.rbnW.Location = new System.Drawing.Point(9, 73);
-            this.rbnW.Name = "rbnW";
-            this.rbnW.Size = new System.Drawing.Size(36, 17);
-            this.rbnW.TabIndex = 2;
-            this.rbnW.Text = "W";
-            this.rbnW.UseVisualStyleBackColor = true;
-            // 
-            // rbnE
-            // 
-            this.rbnE.AutoSize = true;
-            this.rbnE.Location = new System.Drawing.Point(129, 73);
-            this.rbnE.Name = "rbnE";
-            this.rbnE.Size = new System.Drawing.Size(32, 17);
-            this.rbnE.TabIndex = 2;
-            this.rbnE.Text = "E";
-            this.rbnE.UseVisualStyleBackColor = true;
-            // 
-            // rbnSW
-            // 
-            this.rbnSW.AutoSize = true;
-            this.rbnSW.Location = new System.Drawing.Point(9, 96);
-            this.rbnSW.Name = "rbnSW";
-            this.rbnSW.Size = new System.Drawing.Size(43, 17);
-            this.rbnSW.TabIndex = 2;
-            this.rbnSW.Text = "SW";
-            this.rbnSW.UseVisualStyleBackColor = true;
-            // 
-            // rbnS
-            // 
-            this.rbnS.AutoSize = true;
-            this.rbnS.Location = new System.Drawing.Point(69, 96);
-            this.rbnS.Name = "rbnS";
-            this.rbnS.Size = new System.Drawing.Size(32, 17);
-            this.rbnS.TabIndex = 2;
-            this.rbnS.Text = "S";
-            this.rbnS.UseVisualStyleBackColor = true;
-            // 
-            // rbnSE
-            // 
-            this.rbnSE.AutoSize = true;
-            this.rbnSE.Location = new System.Drawing.Point(129, 96);
-            this.rbnSE.Name = "rbnSE";
-            this.rbnSE.Size = new System.Drawing.Size(39, 17);
-            this.rbnSE.TabIndex = 2;
-            this.rbnSE.Text = "SE";
-            this.rbnSE.UseVisualStyleBackColor = true;
-            // 
-            // lblDirections
-            // 
-            this.lblDirections.AutoSize = true;
-            this.lblDirections.Location = new System.Drawing.Point(51, 75);
-            this.lblDirections.Name = "lblDirections";
-            this.lblDirections.Size = new System.Drawing.Size(75, 13);
-            this.lblDirections.TabIndex = 1;
-            this.lblDirections.Text = "Направление";
-            // 
-            // btnModelStartStop
-            // 
-            this.btnModelStartStop.Location = new System.Drawing.Point(696, 129);
-            this.btnModelStartStop.Name = "btnModelStartStop";
-            this.btnModelStartStop.Size = new System.Drawing.Size(136, 40);
-            this.btnModelStartStop.TabIndex = 4;
-            this.btnModelStartStop.Text = "Старт!";
-            this.btnModelStartStop.UseVisualStyleBackColor = true;
-            this.btnModelStartStop.Click += new System.EventHandler(this.button2_Click);
+            this.btnTornado.BackColor = System.Drawing.Color.Red;
+            this.btnTornado.Location = new System.Drawing.Point(25, 24);
+            this.btnTornado.Name = "btnTornado";
+            this.btnTornado.Size = new System.Drawing.Size(95, 28);
+            this.btnTornado.TabIndex = 5;
+            this.btnTornado.Text = "УРАГАН";
+            this.btnTornado.UseVisualStyleBackColor = false;
+            this.btnTornado.Click += new System.EventHandler(this.btnTornado_Click);
             // 
             // WinderMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(841, 500);
+            this.ClientSize = new System.Drawing.Size(841, 519);
             this.Controls.Add(this.lblGeneratorTemp);
             this.Controls.Add(this.pnlSplitter);
             this.Controls.Add(this.lblOutdoorTemp);
@@ -720,6 +744,8 @@
             this.Controls.Add(this.pnlEnvironment);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.pnlCord);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "WinderMain";
             this.Text = "Form1";
             this.pnlControl.ResumeLayout(false);
@@ -728,13 +754,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxStatRose)).EndInit();
             this.pnlEnvironment.ResumeLayout(false);
             this.pnlEnvironment.PerformLayout();
-            this.gbxWind.ResumeLayout(false);
-            this.gbxWind.PerformLayout();
             this.gbxTemp.ResumeLayout(false);
             this.gbxTemp.PerformLayout();
-            this.gbxFire.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numTemp)).EndInit();
+            this.gbxWind.ResumeLayout(false);
+            this.gbxWind.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numWind)).EndInit();
+            this.gbxBad.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -783,7 +809,6 @@
         private System.Windows.Forms.Label lblModel;
         private System.Windows.Forms.GroupBox gbxTemp;
         private System.Windows.Forms.GroupBox gbxWind;
-        private System.Windows.Forms.GroupBox gbxFire;
         private System.Windows.Forms.Button btnModelFire;
         private System.Windows.Forms.Label lblCelsius;
         private System.Windows.Forms.NumericUpDown numTemp;
@@ -799,6 +824,8 @@
         private System.Windows.Forms.Label lblMeterSeconds;
         private System.Windows.Forms.NumericUpDown numWind;
         private System.Windows.Forms.Button btnModelStartStop;
+        private System.Windows.Forms.GroupBox gbxBad;
+        private System.Windows.Forms.Button btnTornado;
 
     }
 }
