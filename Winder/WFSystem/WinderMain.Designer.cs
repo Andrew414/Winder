@@ -776,7 +776,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "WinderMain";
-            this.Text = "Form1";
+            this.Text = "Ветрогенератор";
             this.pnlControl.ResumeLayout(false);
             this.pnlControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStatGraph)).EndInit();
