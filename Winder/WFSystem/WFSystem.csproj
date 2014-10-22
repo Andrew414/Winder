@@ -45,6 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Environment.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="WinderMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,16 +63,12 @@
     <Compile Include="WinderState\Generator.cs" />
     <Compile Include="WinderState\Rotor.cs" />
     <Compile Include="WinderState\GlobalState.cs" />
+    <Compile Include="WinderState\Simulator.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="WinderMain.resx">
       <DependentUpon>WinderMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,10 +86,70 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tumblr_mjgv8kEuMg1s87n79o1_400[1].gif" />
+    <None Include="img\3mp_pol.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\gif-drupalicon3[1].gif" />
+    <None Include="img\blade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade_00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade_07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\water0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\water1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\water2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\water3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\systemactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Connection.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

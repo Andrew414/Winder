@@ -12,6 +12,9 @@ namespace WFSystem.WinderState
 
         public Boolean Active { get; set; }
 
+        public double temperature;
+        public double speed;
+
         public Boolean Start()
         { 
             return true;

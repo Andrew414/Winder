@@ -10,6 +10,7 @@ namespace WFSystem
     {
 
         public Double WindSpeed { get; set; }
+        public Double WindSpeedAvg { get; set; }
         public Double WindDirection { get; set; }
         public Double Temperature { get; set; }
 

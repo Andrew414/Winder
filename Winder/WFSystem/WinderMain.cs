@@ -19,42 +19,27 @@ namespace WFSystem
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            if (timer1.Enabled)
+            if (tmrUpdateUI.Enabled)
             {
-                timer1.Stop();
+                tmrUpdateUI.Stop();
             }
             else
             {
-                timer1.Start();
+                tmrUpdateUI.Start();
             }
         }
 
-        int timerState = 0;
-        int timerPlus = 1;
+        int animationState = 0;
 
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-            timerState += timerPlus;
-            timerState %= 4;
-            panel3.BackgroundImage = Bitmap.FromFile(@"..\..\img\" + "blade" + timerState.ToString() + ".png");
-        }
+            animationState ++ ;
+            animationState %= 4;
 
-        private void panel2_Click(object sender, EventArgs e)
-        {
-            timer1.Interval /= 2;
-
-            return;
-
-            if (timerPlus == 1)
-            {
-                timerPlus = 3;
-            }
-            else
-            {
-                timerPlus = 1;
-            }
+            pnlRotor.BackgroundImage = Image.FromFile(@"..\..\img\blade" + animationState.ToString() + ".png");
+            pnlGenerator.BackgroundImage = Image.FromFile(@"..\..\img\generator.png");
+            pnlWater.BackgroundImage = Image.FromFile(@"..\..\img\water" + animationState.ToString() + ".png");
         }
     }
 }
