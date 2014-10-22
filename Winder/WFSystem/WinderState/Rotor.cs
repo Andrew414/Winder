@@ -16,12 +16,18 @@ namespace WFSystem.WinderState
         public double speed;
 
         public Boolean Start()
-        { 
+        {
+            this.Active = true;
+
             return true;
         }
 
         public Boolean Stop()
         {
+            Active = false;
+            this.speed = 0;
+            this.State.generator.Stop();
+
             return true;
         }
 

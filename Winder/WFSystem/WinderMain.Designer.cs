@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlControl = new System.Windows.Forms.Panel();
+            this.lblStatIntensity = new System.Windows.Forms.Label();
+            this.lblStatDir = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnFire = new System.Windows.Forms.Button();
@@ -48,7 +50,9 @@
             this.lblCplBrake = new System.Windows.Forms.Label();
             this.pnlEnvironment = new System.Windows.Forms.Panel();
             this.btnModelStartStop = new System.Windows.Forms.Button();
+            this.gbxBad = new System.Windows.Forms.GroupBox();
             this.btnModelFire = new System.Windows.Forms.Button();
+            this.btnTornado = new System.Windows.Forms.Button();
             this.gbxTemp = new System.Windows.Forms.GroupBox();
             this.lblCelsius = new System.Windows.Forms.Label();
             this.numTemp = new System.Windows.Forms.NumericUpDown();
@@ -85,22 +89,22 @@
             this.pnlWater = new System.Windows.Forms.Panel();
             this.pnlRotor = new System.Windows.Forms.Panel();
             this.pnlCord = new System.Windows.Forms.Panel();
-            this.gbxBad = new System.Windows.Forms.GroupBox();
-            this.btnTornado = new System.Windows.Forms.Button();
             this.pnlControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStatGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStatRose)).BeginInit();
             this.pnlEnvironment.SuspendLayout();
+            this.gbxBad.SuspendLayout();
             this.gbxTemp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTemp)).BeginInit();
             this.gbxWind.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numWind)).BeginInit();
-            this.gbxBad.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlControl
             // 
             this.pnlControl.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pnlControl.Controls.Add(this.lblStatIntensity);
+            this.pnlControl.Controls.Add(this.lblStatDir);
             this.pnlControl.Controls.Add(this.btnStart);
             this.pnlControl.Controls.Add(this.btnStop);
             this.pnlControl.Controls.Add(this.btnFire);
@@ -123,6 +127,28 @@
             this.pnlControl.TabIndex = 0;
             this.pnlControl.Click += new System.EventHandler(this.panel1_Click);
             // 
+            // lblStatIntensity
+            // 
+            this.lblStatIntensity.AutoSize = true;
+            this.lblStatIntensity.BackColor = System.Drawing.SystemColors.Menu;
+            this.lblStatIntensity.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatIntensity.Location = new System.Drawing.Point(116, 151);
+            this.lblStatIntensity.Name = "lblStatIntensity";
+            this.lblStatIntensity.Size = new System.Drawing.Size(63, 19);
+            this.lblStatIntensity.TabIndex = 2;
+            this.lblStatIntensity.Text = "12 м/с";
+            // 
+            // lblStatDir
+            // 
+            this.lblStatDir.AutoSize = true;
+            this.lblStatDir.BackColor = System.Drawing.SystemColors.Menu;
+            this.lblStatDir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatDir.Location = new System.Drawing.Point(35, 151);
+            this.lblStatDir.Name = "lblStatDir";
+            this.lblStatDir.Size = new System.Drawing.Size(21, 19);
+            this.lblStatDir.TabIndex = 2;
+            this.lblStatDir.Text = "N";
+            // 
             // btnStart
             // 
             this.btnStart.BackColor = System.Drawing.Color.Lime;
@@ -132,6 +158,7 @@
             this.btnStart.TabIndex = 5;
             this.btnStart.Text = "ПУСК";
             this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnStop
             // 
@@ -142,6 +169,7 @@
             this.btnStop.TabIndex = 5;
             this.btnStop.Text = "СТОП";
             this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnFire
             // 
@@ -152,6 +180,7 @@
             this.btnFire.TabIndex = 5;
             this.btnFire.Text = "ПОЖАР";
             this.btnFire.UseVisualStyleBackColor = false;
+            this.btnFire.Click += new System.EventHandler(this.btnFire_Click);
             // 
             // pbxStatGraph
             // 
@@ -299,6 +328,17 @@
             this.btnModelStartStop.UseVisualStyleBackColor = true;
             this.btnModelStartStop.Click += new System.EventHandler(this.button2_Click);
             // 
+            // gbxBad
+            // 
+            this.gbxBad.Controls.Add(this.btnModelFire);
+            this.gbxBad.Controls.Add(this.btnTornado);
+            this.gbxBad.Location = new System.Drawing.Point(187, 101);
+            this.gbxBad.Name = "gbxBad";
+            this.gbxBad.Size = new System.Drawing.Size(134, 87);
+            this.gbxBad.TabIndex = 3;
+            this.gbxBad.TabStop = false;
+            this.gbxBad.Text = "Аварийные ситуации";
+            // 
             // btnModelFire
             // 
             this.btnModelFire.BackColor = System.Drawing.Color.Red;
@@ -309,6 +349,17 @@
             this.btnModelFire.Text = "ПОЖАР";
             this.btnModelFire.UseVisualStyleBackColor = false;
             this.btnModelFire.Click += new System.EventHandler(this.btnModelFire_Click);
+            // 
+            // btnTornado
+            // 
+            this.btnTornado.BackColor = System.Drawing.Color.Red;
+            this.btnTornado.Location = new System.Drawing.Point(25, 24);
+            this.btnTornado.Name = "btnTornado";
+            this.btnTornado.Size = new System.Drawing.Size(95, 28);
+            this.btnTornado.TabIndex = 5;
+            this.btnTornado.Text = "УРАГАН";
+            this.btnTornado.UseVisualStyleBackColor = false;
+            this.btnTornado.Click += new System.EventHandler(this.btnTornado_Click);
             // 
             // gbxTemp
             // 
@@ -516,7 +567,6 @@
             // 
             // tmrUpdateUI
             // 
-            this.tmrUpdateUI.Interval = 50;
             this.tmrUpdateUI.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lblBrakeSystem
@@ -670,6 +720,7 @@
             this.lblGeneratorTemp.Size = new System.Drawing.Size(68, 16);
             this.lblGeneratorTemp.TabIndex = 2;
             this.lblGeneratorTemp.Text = "t = 180 °C";
+            this.lblGeneratorTemp.DoubleClick += new System.EventHandler(this.lblGeneratorTemp_DoubleClick);
             // 
             // pnlWater
             // 
@@ -694,28 +745,6 @@
             this.pnlCord.Name = "pnlCord";
             this.pnlCord.Size = new System.Drawing.Size(256, 256);
             this.pnlCord.TabIndex = 1;
-            // 
-            // gbxBad
-            // 
-            this.gbxBad.Controls.Add(this.btnModelFire);
-            this.gbxBad.Controls.Add(this.btnTornado);
-            this.gbxBad.Location = new System.Drawing.Point(187, 101);
-            this.gbxBad.Name = "gbxBad";
-            this.gbxBad.Size = new System.Drawing.Size(134, 87);
-            this.gbxBad.TabIndex = 3;
-            this.gbxBad.TabStop = false;
-            this.gbxBad.Text = "Аварийные ситуации";
-            // 
-            // btnTornado
-            // 
-            this.btnTornado.BackColor = System.Drawing.Color.Red;
-            this.btnTornado.Location = new System.Drawing.Point(25, 24);
-            this.btnTornado.Name = "btnTornado";
-            this.btnTornado.Size = new System.Drawing.Size(95, 28);
-            this.btnTornado.TabIndex = 5;
-            this.btnTornado.Text = "УРАГАН";
-            this.btnTornado.UseVisualStyleBackColor = false;
-            this.btnTornado.Click += new System.EventHandler(this.btnTornado_Click);
             // 
             // WinderMain
             // 
@@ -754,13 +783,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxStatRose)).EndInit();
             this.pnlEnvironment.ResumeLayout(false);
             this.pnlEnvironment.PerformLayout();
+            this.gbxBad.ResumeLayout(false);
             this.gbxTemp.ResumeLayout(false);
             this.gbxTemp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTemp)).EndInit();
             this.gbxWind.ResumeLayout(false);
             this.gbxWind.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numWind)).EndInit();
-            this.gbxBad.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -826,6 +855,8 @@
         private System.Windows.Forms.Button btnModelStartStop;
         private System.Windows.Forms.GroupBox gbxBad;
         private System.Windows.Forms.Button btnTornado;
+        private System.Windows.Forms.Label lblStatIntensity;
+        private System.Windows.Forms.Label lblStatDir;
 
     }
 }

@@ -24,7 +24,7 @@ namespace WFSystem
             state.panel = new ControlPanel();
             state.rotor = new Rotor();
 
-            sim.state = state;
+            state.generator.State = state.panel.State = state.rotor.State = sim.state = state;
         }
 
         private void panel1_Click(object sender, EventArgs e)
@@ -92,6 +92,12 @@ namespace WFSystem
             pnlCplFire.BackgroundImage = Image.FromFile(@"..\..\img\system" + (sim.state.generator.FireSystemActive ? "alarm" : "inactive") + "16.png");
             pnlCplGenOff.BackgroundImage = Image.FromFile(@"..\..\img\system" + (sim.state.generator.Active ? "inactive" : "alarm") + "16.png");
             pnlCplHeater.BackgroundImage = Image.FromFile(@"..\..\img\system" + (sim.state.rotor.heaterEnabled ? "active" : "inactive") + "16.png");
+
+            lblStatDir.Text = sim.state.env.WindDirection;
+            if (timerState % 10 == 0)
+            {
+                lblStatIntensity.Text = sim.state.env.WindSpeed.ToString() + " м/с";
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -131,6 +137,28 @@ namespace WFSystem
         private void btnTornado_Click(object sender, EventArgs e)
         {
             sim.state.env.WindSpeed = 35;
+            sim.ProcessSignals();
+        }
+
+        private void btnFire_Click(object sender, EventArgs e)
+        {
+            sim.state.generator.ActivateFireSystem();
+        }
+
+        private void lblGeneratorTemp_DoubleClick(object sender, EventArgs e)
+        {
+            sim.state.generator.temperature = 300;
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            sim.state.rotor.Stop();
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            sim.state.rotor.Start();
+            sim.state.generator.Start();
         }
     }
 }

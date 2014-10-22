@@ -17,16 +17,26 @@ namespace WFSystem.WinderState
 
         public Boolean Start()
         {
+            if (!State.rotor.Active)
+            {
+                return false; 
+            }
+
+            this.Active = true;
             return true;
         }
 
         public Boolean Stop()
         {
+            this.Active = false;
             return true;
         }
 
         public Boolean ActivateFireSystem()
         {
+            this.Active = false;
+            this.FireSystemActive = true;
+
             return true;
         }
 
