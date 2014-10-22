@@ -32,6 +32,7 @@ namespace WFSystem
         int timerState = 0;
         int timerPlus = 1;
 
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             
@@ -42,6 +43,10 @@ namespace WFSystem
 
         private void panel2_Click(object sender, EventArgs e)
         {
+            timer1.Interval /= 2;
+
+            return;
+
             if (timerPlus == 1)
             {
                 timerPlus = 3;

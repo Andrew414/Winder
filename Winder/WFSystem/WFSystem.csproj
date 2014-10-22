@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Environment.cs" />
     <Compile Include="WinderMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +53,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinderState\Constants.cs" />
+    <Compile Include="WinderState\ControlPanel.cs" />
+    <Compile Include="WinderState\Generator.cs" />
+    <Compile Include="WinderState\Rotor.cs" />
+    <Compile Include="WinderState\GlobalState.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
