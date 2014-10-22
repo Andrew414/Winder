@@ -11,6 +11,7 @@ namespace WFSystem.WinderState
         public GlobalState State { get; set; }
 
         public Boolean Active{ get; set; }
+        public Boolean FireSystemActive { get; set; }
 
         public double temperature;
 

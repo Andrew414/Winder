@@ -151,6 +151,21 @@
   <ItemGroup>
     <None Include="img\Connection.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\systemactive16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\systemalarm16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\systeminactive16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\systeminactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\splitter.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

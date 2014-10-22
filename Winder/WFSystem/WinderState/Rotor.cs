@@ -24,5 +24,69 @@ namespace WFSystem.WinderState
         {
             return true;
         }
+
+        private DateTime brakeStart;
+        public Boolean brakeEnabled;
+
+        private DateTime heaterStart;
+        public Boolean heaterEnabled;
+
+        public Boolean ReportHighSpeed()
+        {
+            if (brakeEnabled) 
+            {
+                return false;
+            }
+
+            brakeEnabled = true;
+            brakeStart = DateTime.Now;
+
+            return true;
+        }
+
+        public Boolean CheckHighSpeed()
+        {
+            if (!brakeEnabled)
+            {
+                return false;
+            }
+
+            if (brakeEnabled && brakeStart.AddSeconds(Constants.MAINTENANSE_PERIOD.TotalSeconds) < DateTime.Now)
+            {
+                brakeEnabled = false;
+                return false;
+            }
+
+            return true;
+        }
+
+        public Boolean ReportLowTemp()
+        {
+            if (heaterEnabled)
+            {
+                return false;
+            }
+
+            heaterEnabled = true;
+            heaterStart = DateTime.Now;
+
+            return true;
+        }
+
+        public Boolean CheckLowTemp()
+        {
+            if (!heaterEnabled)
+            {
+                return false;
+            }
+
+            if (heaterEnabled && heaterStart.AddSeconds(Constants.MAINTENANSE_PERIOD.TotalSeconds) < DateTime.Now)
+            {
+                heaterEnabled = false;
+                return false;
+            }
+
+            return true;
+        }
     }
 }

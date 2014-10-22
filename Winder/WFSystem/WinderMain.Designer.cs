@@ -29,101 +29,396 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlControl = new System.Windows.Forms.Panel();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnFire = new System.Windows.Forms.Button();
+            this.pbxStatGraph = new System.Windows.Forms.PictureBox();
+            this.pbxStatRose = new System.Windows.Forms.PictureBox();
+            this.lblCplFire = new System.Windows.Forms.Label();
+            this.pnlCplGenOff = new System.Windows.Forms.Panel();
+            this.pnlCplBlock = new System.Windows.Forms.Panel();
+            this.pnlCplHeater = new System.Windows.Forms.Panel();
+            this.pnlCplBrake = new System.Windows.Forms.Panel();
+            this.pnlCplFire = new System.Windows.Forms.Panel();
+            this.lblControlPanel = new System.Windows.Forms.Label();
+            this.lblCplGenOff = new System.Windows.Forms.Label();
+            this.lblCplBlock = new System.Windows.Forms.Label();
+            this.lblCplHeater = new System.Windows.Forms.Label();
+            this.lblCplBrake = new System.Windows.Forms.Label();
+            this.pnlEnvironment = new System.Windows.Forms.Panel();
             this.tmrUpdateUI = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblBrakeSystem = new System.Windows.Forms.Label();
+            this.lblHeater = new System.Windows.Forms.Label();
+            this.lblFireSystem = new System.Windows.Forms.Label();
+            this.lblRotorSpeed = new System.Windows.Forms.Label();
+            this.lblOutdoorTemp = new System.Windows.Forms.Label();
+            this.lblWindDirection = new System.Windows.Forms.Label();
+            this.lblWindIntensity = new System.Windows.Forms.Label();
+            this.lblValueWindIntensity = new System.Windows.Forms.Label();
+            this.lblValueWindDirection = new System.Windows.Forms.Label();
+            this.lblRotor = new System.Windows.Forms.Label();
+            this.lblGenerator = new System.Windows.Forms.Label();
+            this.pnlSplitter = new System.Windows.Forms.Panel();
+            this.pnlIndHeater = new System.Windows.Forms.Panel();
+            this.pnlIndBrake = new System.Windows.Forms.Panel();
             this.pnlGenerator = new System.Windows.Forms.Panel();
+            this.lblGeneratorTemp = new System.Windows.Forms.Label();
             this.pnlWater = new System.Windows.Forms.Panel();
             this.pnlRotor = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pnlGenerator.SuspendLayout();
-            this.pnlRotor.SuspendLayout();
+            this.pnlCord = new System.Windows.Forms.Panel();
+            this.pnlControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxStatGraph)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxStatRose)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlControl
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Location = new System.Drawing.Point(544, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 226);
-            this.panel1.TabIndex = 0;
-            this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            this.pnlControl.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pnlControl.Controls.Add(this.btnStart);
+            this.pnlControl.Controls.Add(this.btnStop);
+            this.pnlControl.Controls.Add(this.btnFire);
+            this.pnlControl.Controls.Add(this.pbxStatGraph);
+            this.pnlControl.Controls.Add(this.pbxStatRose);
+            this.pnlControl.Controls.Add(this.lblCplFire);
+            this.pnlControl.Controls.Add(this.pnlCplGenOff);
+            this.pnlControl.Controls.Add(this.pnlCplBlock);
+            this.pnlControl.Controls.Add(this.pnlCplHeater);
+            this.pnlControl.Controls.Add(this.pnlCplBrake);
+            this.pnlControl.Controls.Add(this.pnlCplFire);
+            this.pnlControl.Controls.Add(this.lblControlPanel);
+            this.pnlControl.Controls.Add(this.lblCplGenOff);
+            this.pnlControl.Controls.Add(this.lblCplBlock);
+            this.pnlControl.Controls.Add(this.lblCplHeater);
+            this.pnlControl.Controls.Add(this.lblCplBrake);
+            this.pnlControl.Location = new System.Drawing.Point(618, -90);
+            this.pnlControl.Name = "pnlControl";
+            this.pnlControl.Size = new System.Drawing.Size(222, 414);
+            this.pnlControl.TabIndex = 0;
+            this.pnlControl.Click += new System.EventHandler(this.panel1_Click);
             // 
-            // panel2
+            // btnStart
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Location = new System.Drawing.Point(544, 231);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 268);
-            this.panel2.TabIndex = 0;
+            this.btnStart.BackColor = System.Drawing.Color.Lime;
+            this.btnStart.Location = new System.Drawing.Point(143, 308);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(58, 53);
+            this.btnStart.TabIndex = 5;
+            this.btnStart.Text = "ПУСК";
+            this.btnStart.UseVisualStyleBackColor = false;
+            // 
+            // btnStop
+            // 
+            this.btnStop.BackColor = System.Drawing.Color.Red;
+            this.btnStop.Location = new System.Drawing.Point(79, 308);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(58, 53);
+            this.btnStop.TabIndex = 5;
+            this.btnStop.Text = "СТОП";
+            this.btnStop.UseVisualStyleBackColor = false;
+            // 
+            // btnFire
+            // 
+            this.btnFire.BackColor = System.Drawing.Color.Red;
+            this.btnFire.Location = new System.Drawing.Point(15, 308);
+            this.btnFire.Name = "btnFire";
+            this.btnFire.Size = new System.Drawing.Size(58, 53);
+            this.btnFire.TabIndex = 5;
+            this.btnFire.Text = "ПОЖАР";
+            this.btnFire.UseVisualStyleBackColor = false;
+            // 
+            // pbxStatGraph
+            // 
+            this.pbxStatGraph.BackColor = System.Drawing.SystemColors.Menu;
+            this.pbxStatGraph.Location = new System.Drawing.Point(100, 127);
+            this.pbxStatGraph.Name = "pbxStatGraph";
+            this.pbxStatGraph.Size = new System.Drawing.Size(96, 64);
+            this.pbxStatGraph.TabIndex = 4;
+            this.pbxStatGraph.TabStop = false;
+            // 
+            // pbxStatRose
+            // 
+            this.pbxStatRose.BackColor = System.Drawing.SystemColors.Menu;
+            this.pbxStatRose.Location = new System.Drawing.Point(15, 127);
+            this.pbxStatRose.Name = "pbxStatRose";
+            this.pbxStatRose.Size = new System.Drawing.Size(64, 64);
+            this.pbxStatRose.TabIndex = 4;
+            this.pbxStatRose.TabStop = false;
+            // 
+            // lblCplFire
+            // 
+            this.lblCplFire.AutoSize = true;
+            this.lblCplFire.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCplFire.Location = new System.Drawing.Point(37, 197);
+            this.lblCplFire.Name = "lblCplFire";
+            this.lblCplFire.Size = new System.Drawing.Size(156, 16);
+            this.lblCplFire.TabIndex = 2;
+            this.lblCplFire.Text = "Система пожаротушения";
+            // 
+            // pnlCplGenOff
+            // 
+            this.pnlCplGenOff.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive16;
+            this.pnlCplGenOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlCplGenOff.Location = new System.Drawing.Point(15, 285);
+            this.pnlCplGenOff.Name = "pnlCplGenOff";
+            this.pnlCplGenOff.Size = new System.Drawing.Size(16, 16);
+            this.pnlCplGenOff.TabIndex = 3;
+            // 
+            // pnlCplBlock
+            // 
+            this.pnlCplBlock.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive16;
+            this.pnlCplBlock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlCplBlock.Location = new System.Drawing.Point(15, 263);
+            this.pnlCplBlock.Name = "pnlCplBlock";
+            this.pnlCplBlock.Size = new System.Drawing.Size(16, 16);
+            this.pnlCplBlock.TabIndex = 3;
+            // 
+            // pnlCplHeater
+            // 
+            this.pnlCplHeater.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive16;
+            this.pnlCplHeater.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlCplHeater.Location = new System.Drawing.Point(15, 241);
+            this.pnlCplHeater.Name = "pnlCplHeater";
+            this.pnlCplHeater.Size = new System.Drawing.Size(16, 16);
+            this.pnlCplHeater.TabIndex = 3;
+            // 
+            // pnlCplBrake
+            // 
+            this.pnlCplBrake.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive16;
+            this.pnlCplBrake.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlCplBrake.Location = new System.Drawing.Point(15, 219);
+            this.pnlCplBrake.Name = "pnlCplBrake";
+            this.pnlCplBrake.Size = new System.Drawing.Size(16, 16);
+            this.pnlCplBrake.TabIndex = 3;
+            // 
+            // pnlCplFire
+            // 
+            this.pnlCplFire.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive16;
+            this.pnlCplFire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlCplFire.Location = new System.Drawing.Point(15, 197);
+            this.pnlCplFire.Name = "pnlCplFire";
+            this.pnlCplFire.Size = new System.Drawing.Size(16, 16);
+            this.pnlCplFire.TabIndex = 3;
+            // 
+            // lblControlPanel
+            // 
+            this.lblControlPanel.AutoSize = true;
+            this.lblControlPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControlPanel.Location = new System.Drawing.Point(41, 382);
+            this.lblControlPanel.Name = "lblControlPanel";
+            this.lblControlPanel.Size = new System.Drawing.Size(152, 19);
+            this.lblControlPanel.TabIndex = 2;
+            this.lblControlPanel.Text = "Пульт оператора";
+            // 
+            // lblCplGenOff
+            // 
+            this.lblCplGenOff.AutoSize = true;
+            this.lblCplGenOff.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCplGenOff.Location = new System.Drawing.Point(37, 285);
+            this.lblCplGenOff.Name = "lblCplGenOff";
+            this.lblCplGenOff.Size = new System.Drawing.Size(134, 16);
+            this.lblCplGenOff.TabIndex = 2;
+            this.lblCplGenOff.Text = "Генератор выключен";
+            // 
+            // lblCplBlock
+            // 
+            this.lblCplBlock.AutoSize = true;
+            this.lblCplBlock.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCplBlock.Location = new System.Drawing.Point(37, 263);
+            this.lblCplBlock.Name = "lblCplBlock";
+            this.lblCplBlock.Size = new System.Drawing.Size(141, 16);
+            this.lblCplBlock.TabIndex = 2;
+            this.lblCplBlock.Text = "Блокировка вращения";
+            // 
+            // lblCplHeater
+            // 
+            this.lblCplHeater.AutoSize = true;
+            this.lblCplHeater.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCplHeater.Location = new System.Drawing.Point(37, 241);
+            this.lblCplHeater.Name = "lblCplHeater";
+            this.lblCplHeater.Size = new System.Drawing.Size(122, 16);
+            this.lblCplHeater.TabIndex = 2;
+            this.lblCplHeater.Text = "Система подогрева";
+            // 
+            // lblCplBrake
+            // 
+            this.lblCplBrake.AutoSize = true;
+            this.lblCplBrake.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCplBrake.Location = new System.Drawing.Point(37, 219);
+            this.lblCplBrake.Name = "lblCplBrake";
+            this.lblCplBrake.Size = new System.Drawing.Size(134, 16);
+            this.lblCplBrake.TabIndex = 2;
+            this.lblCplBrake.Text = "Система торможения";
+            // 
+            // pnlEnvironment
+            // 
+            this.pnlEnvironment.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlEnvironment.Location = new System.Drawing.Point(1, 323);
+            this.pnlEnvironment.Name = "pnlEnvironment";
+            this.pnlEnvironment.Size = new System.Drawing.Size(839, 131);
+            this.pnlEnvironment.TabIndex = 0;
             // 
             // tmrUpdateUI
             // 
             this.tmrUpdateUI.Interval = 50;
             this.tmrUpdateUI.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label1
+            // lblBrakeSystem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 234);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Система торможения";
+            this.lblBrakeSystem.AutoSize = true;
+            this.lblBrakeSystem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrakeSystem.Location = new System.Drawing.Point(14, 142);
+            this.lblBrakeSystem.Name = "lblBrakeSystem";
+            this.lblBrakeSystem.Size = new System.Drawing.Size(134, 16);
+            this.lblBrakeSystem.TabIndex = 2;
+            this.lblBrakeSystem.Text = "Система торможения";
             // 
-            // label2
+            // lblHeater
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(146, 357);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Система подогрева";
+            this.lblHeater.AutoSize = true;
+            this.lblHeater.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeater.Location = new System.Drawing.Point(22, 243);
+            this.lblHeater.Name = "lblHeater";
+            this.lblHeater.Size = new System.Drawing.Size(122, 16);
+            this.lblHeater.TabIndex = 2;
+            this.lblHeater.Text = "Система подогрева";
             // 
-            // panel5
+            // lblFireSystem
             // 
-            this.panel5.BackgroundImage = global::WFSystem.Properties.Resources.systemactive;
-            this.panel5.Location = new System.Drawing.Point(149, 319);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(32, 32);
-            this.panel5.TabIndex = 3;
+            this.lblFireSystem.AutoSize = true;
+            this.lblFireSystem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFireSystem.Location = new System.Drawing.Point(423, 53);
+            this.lblFireSystem.Name = "lblFireSystem";
+            this.lblFireSystem.Size = new System.Drawing.Size(156, 16);
+            this.lblFireSystem.TabIndex = 2;
+            this.lblFireSystem.Text = "Система пожаротушения";
             // 
-            // panel3
+            // lblRotorSpeed
             // 
-            this.panel3.BackgroundImage = global::WFSystem.Properties.Resources.systemactive;
-            this.panel3.Location = new System.Drawing.Point(94, 199);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(32, 32);
-            this.panel3.TabIndex = 3;
+            this.lblRotorSpeed.AutoSize = true;
+            this.lblRotorSpeed.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRotorSpeed.Location = new System.Drawing.Point(137, 74);
+            this.lblRotorSpeed.Name = "lblRotorSpeed";
+            this.lblRotorSpeed.Size = new System.Drawing.Size(169, 16);
+            this.lblRotorSpeed.TabIndex = 2;
+            this.lblRotorSpeed.Text = "ω = 120 оборотов в минуту";
+            // 
+            // lblOutdoorTemp
+            // 
+            this.lblOutdoorTemp.AutoSize = true;
+            this.lblOutdoorTemp.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutdoorTemp.Location = new System.Drawing.Point(82, 215);
+            this.lblOutdoorTemp.Name = "lblOutdoorTemp";
+            this.lblOutdoorTemp.Size = new System.Drawing.Size(61, 16);
+            this.lblOutdoorTemp.TabIndex = 2;
+            this.lblOutdoorTemp.Text = "t = 12 °C";
+            // 
+            // lblWindDirection
+            // 
+            this.lblWindDirection.AutoSize = true;
+            this.lblWindDirection.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWindDirection.Location = new System.Drawing.Point(5, 9);
+            this.lblWindDirection.Name = "lblWindDirection";
+            this.lblWindDirection.Size = new System.Drawing.Size(129, 16);
+            this.lblWindDirection.TabIndex = 2;
+            this.lblWindDirection.Text = "Направление ветра:";
+            // 
+            // lblWindIntensity
+            // 
+            this.lblWindIntensity.AutoSize = true;
+            this.lblWindIntensity.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWindIntensity.Location = new System.Drawing.Point(5, 25);
+            this.lblWindIntensity.Name = "lblWindIntensity";
+            this.lblWindIntensity.Size = new System.Drawing.Size(105, 16);
+            this.lblWindIntensity.TabIndex = 2;
+            this.lblWindIntensity.Text = "Скорость ветра:";
+            // 
+            // lblValueWindIntensity
+            // 
+            this.lblValueWindIntensity.AutoSize = true;
+            this.lblValueWindIntensity.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValueWindIntensity.Location = new System.Drawing.Point(141, 25);
+            this.lblValueWindIntensity.Name = "lblValueWindIntensity";
+            this.lblValueWindIntensity.Size = new System.Drawing.Size(45, 16);
+            this.lblValueWindIntensity.TabIndex = 2;
+            this.lblValueWindIntensity.Text = "12 м/с";
+            // 
+            // lblValueWindDirection
+            // 
+            this.lblValueWindDirection.AutoSize = true;
+            this.lblValueWindDirection.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValueWindDirection.Location = new System.Drawing.Point(141, 9);
+            this.lblValueWindDirection.Name = "lblValueWindDirection";
+            this.lblValueWindDirection.Size = new System.Drawing.Size(36, 16);
+            this.lblValueWindDirection.TabIndex = 2;
+            this.lblValueWindDirection.Text = "NNW";
+            // 
+            // lblRotor
+            // 
+            this.lblRotor.AutoSize = true;
+            this.lblRotor.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRotor.Location = new System.Drawing.Point(116, 292);
+            this.lblRotor.Name = "lblRotor";
+            this.lblRotor.Size = new System.Drawing.Size(127, 19);
+            this.lblRotor.TabIndex = 2;
+            this.lblRotor.Text = "Ветротурбина";
+            // 
+            // lblGenerator
+            // 
+            this.lblGenerator.AutoSize = true;
+            this.lblGenerator.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenerator.Location = new System.Drawing.Point(402, 292);
+            this.lblGenerator.Name = "lblGenerator";
+            this.lblGenerator.Size = new System.Drawing.Size(166, 19);
+            this.lblGenerator.TabIndex = 2;
+            this.lblGenerator.Text = "Электрогенератор";
+            // 
+            // pnlSplitter
+            // 
+            this.pnlSplitter.BackgroundImage = global::WFSystem.Properties.Resources.splitter;
+            this.pnlSplitter.Location = new System.Drawing.Point(596, 47);
+            this.pnlSplitter.Name = "pnlSplitter";
+            this.pnlSplitter.Size = new System.Drawing.Size(3, 256);
+            this.pnlSplitter.TabIndex = 1;
+            // 
+            // pnlIndHeater
+            // 
+            this.pnlIndHeater.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive;
+            this.pnlIndHeater.Location = new System.Drawing.Point(150, 227);
+            this.pnlIndHeater.Name = "pnlIndHeater";
+            this.pnlIndHeater.Size = new System.Drawing.Size(32, 32);
+            this.pnlIndHeater.TabIndex = 3;
+            // 
+            // pnlIndBrake
+            // 
+            this.pnlIndBrake.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive;
+            this.pnlIndBrake.Location = new System.Drawing.Point(95, 107);
+            this.pnlIndBrake.Name = "pnlIndBrake";
+            this.pnlIndBrake.Size = new System.Drawing.Size(32, 32);
+            this.pnlIndBrake.TabIndex = 3;
             // 
             // pnlGenerator
             // 
             this.pnlGenerator.BackgroundImage = global::WFSystem.Properties.Resources.generator;
-            this.pnlGenerator.Controls.Add(this.label6);
-            this.pnlGenerator.Location = new System.Drawing.Point(322, 234);
+            this.pnlGenerator.Location = new System.Drawing.Point(382, 143);
             this.pnlGenerator.Name = "pnlGenerator";
             this.pnlGenerator.Size = new System.Drawing.Size(128, 128);
             this.pnlGenerator.TabIndex = 1;
             // 
+            // lblGeneratorTemp
+            // 
+            this.lblGeneratorTemp.AutoSize = true;
+            this.lblGeneratorTemp.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGeneratorTemp.Location = new System.Drawing.Point(451, 255);
+            this.lblGeneratorTemp.Name = "lblGeneratorTemp";
+            this.lblGeneratorTemp.Size = new System.Drawing.Size(68, 16);
+            this.lblGeneratorTemp.TabIndex = 2;
+            this.lblGeneratorTemp.Text = "t = 180 °C";
+            // 
             // pnlWater
             // 
             this.pnlWater.BackgroundImage = global::WFSystem.Properties.Resources.water3;
-            this.pnlWater.Location = new System.Drawing.Point(322, 150);
+            this.pnlWater.Location = new System.Drawing.Point(382, 44);
             this.pnlWater.Name = "pnlWater";
             this.pnlWater.Size = new System.Drawing.Size(128, 128);
             this.pnlWater.TabIndex = 1;
@@ -131,136 +426,52 @@
             // pnlRotor
             // 
             this.pnlRotor.BackgroundImage = global::WFSystem.Properties.Resources.blade0;
-            this.pnlRotor.Controls.Add(this.panel4);
-            this.pnlRotor.Location = new System.Drawing.Point(132, 188);
+            this.pnlRotor.Location = new System.Drawing.Point(133, 96);
             this.pnlRotor.Name = "pnlRotor";
             this.pnlRotor.Size = new System.Drawing.Size(128, 128);
             this.pnlRotor.TabIndex = 1;
             // 
-            // panel4
+            // pnlCord
             // 
-            this.panel4.BackgroundImage = global::WFSystem.Properties.Resources.systemactive;
-            this.panel4.Location = new System.Drawing.Point(20, 134);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(32, 32);
-            this.panel4.TabIndex = 3;
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = global::WFSystem.Properties.Resources.Connection;
-            this.panel6.Location = new System.Drawing.Point(162, 177);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(192, 192);
-            this.panel6.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(363, 161);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Система пожаротушения";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(136, 166);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "v = 120 оборотов в минуту";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(81, 307);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 16);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "t = 12*C";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(66, 101);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 16);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "t = 180*C";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(5, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 16);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Направление ветра:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(5, 25);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 16);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Скорость ветра:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(141, 25);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 16);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "12 м/с";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(141, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 16);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "NNW";
+            this.pnlCord.BackgroundImage = global::WFSystem.Properties.Resources.Connection;
+            this.pnlCord.Location = new System.Drawing.Point(163, 47);
+            this.pnlCord.Name = "pnlCord";
+            this.pnlCord.Size = new System.Drawing.Size(256, 256);
+            this.pnlCord.TabIndex = 1;
             // 
             // WinderMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(768, 499);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(841, 465);
+            this.Controls.Add(this.lblGeneratorTemp);
+            this.Controls.Add(this.pnlSplitter);
+            this.Controls.Add(this.lblOutdoorTemp);
+            this.Controls.Add(this.lblFireSystem);
+            this.Controls.Add(this.pnlIndHeater);
+            this.Controls.Add(this.pnlIndBrake);
+            this.Controls.Add(this.lblGenerator);
+            this.Controls.Add(this.lblRotor);
+            this.Controls.Add(this.lblHeater);
+            this.Controls.Add(this.lblRotorSpeed);
+            this.Controls.Add(this.lblValueWindDirection);
+            this.Controls.Add(this.lblValueWindIntensity);
+            this.Controls.Add(this.lblWindIntensity);
+            this.Controls.Add(this.lblWindDirection);
+            this.Controls.Add(this.lblBrakeSystem);
             this.Controls.Add(this.pnlGenerator);
             this.Controls.Add(this.pnlWater);
             this.Controls.Add(this.pnlRotor);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.pnlEnvironment);
+            this.Controls.Add(this.pnlControl);
+            this.Controls.Add(this.pnlCord);
             this.Name = "WinderMain";
             this.Text = "Form1";
-            this.pnlGenerator.ResumeLayout(false);
-            this.pnlGenerator.PerformLayout();
-            this.pnlRotor.ResumeLayout(false);
+            this.pnlControl.ResumeLayout(false);
+            this.pnlControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxStatGraph)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxStatRose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,26 +479,44 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlControl;
+        private System.Windows.Forms.Panel pnlEnvironment;
         private System.Windows.Forms.Timer tmrUpdateUI;
         private System.Windows.Forms.Panel pnlRotor;
         private System.Windows.Forms.Panel pnlGenerator;
         private System.Windows.Forms.Panel pnlWater;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblBrakeSystem;
+        private System.Windows.Forms.Panel pnlIndBrake;
+        private System.Windows.Forms.Label lblHeater;
+        private System.Windows.Forms.Panel pnlCord;
+        private System.Windows.Forms.Label lblGeneratorTemp;
+        private System.Windows.Forms.Label lblFireSystem;
+        private System.Windows.Forms.Label lblRotorSpeed;
+        private System.Windows.Forms.Label lblOutdoorTemp;
+        private System.Windows.Forms.Label lblWindDirection;
+        private System.Windows.Forms.Label lblWindIntensity;
+        private System.Windows.Forms.Label lblValueWindIntensity;
+        private System.Windows.Forms.Label lblValueWindDirection;
+        private System.Windows.Forms.Panel pnlIndHeater;
+        private System.Windows.Forms.Label lblRotor;
+        private System.Windows.Forms.Label lblGenerator;
+        private System.Windows.Forms.Panel pnlCplBrake;
+        private System.Windows.Forms.Panel pnlCplFire;
+        private System.Windows.Forms.Label lblControlPanel;
+        private System.Windows.Forms.Panel pnlCplHeater;
+        private System.Windows.Forms.PictureBox pbxStatRose;
+        private System.Windows.Forms.Label lblCplFire;
+        private System.Windows.Forms.Panel pnlCplGenOff;
+        private System.Windows.Forms.Panel pnlCplBlock;
+        private System.Windows.Forms.Label lblCplGenOff;
+        private System.Windows.Forms.Label lblCplBlock;
+        private System.Windows.Forms.Label lblCplHeater;
+        private System.Windows.Forms.Label lblCplBrake;
+        private System.Windows.Forms.Panel pnlSplitter;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnFire;
+        private System.Windows.Forms.PictureBox pbxStatGraph;
 
     }
 }
