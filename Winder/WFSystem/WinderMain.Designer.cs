@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinderMain));
             this.pnlControl = new System.Windows.Forms.Panel();
             this.lblStatIntensity = new System.Windows.Forms.Label();
             this.lblStatDir = new System.Windows.Forms.Label();
@@ -212,7 +213,7 @@
             // 
             // pnlCplGenOff
             // 
-            this.pnlCplGenOff.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive16;
+            this.pnlCplGenOff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCplGenOff.BackgroundImage")));
             this.pnlCplGenOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCplGenOff.Location = new System.Drawing.Point(15, 285);
             this.pnlCplGenOff.Name = "pnlCplGenOff";
@@ -221,7 +222,7 @@
             // 
             // pnlCplBlock
             // 
-            this.pnlCplBlock.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive16;
+            this.pnlCplBlock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCplBlock.BackgroundImage")));
             this.pnlCplBlock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCplBlock.Location = new System.Drawing.Point(15, 263);
             this.pnlCplBlock.Name = "pnlCplBlock";
@@ -230,7 +231,7 @@
             // 
             // pnlCplHeater
             // 
-            this.pnlCplHeater.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive16;
+            this.pnlCplHeater.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCplHeater.BackgroundImage")));
             this.pnlCplHeater.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCplHeater.Location = new System.Drawing.Point(15, 241);
             this.pnlCplHeater.Name = "pnlCplHeater";
@@ -239,7 +240,7 @@
             // 
             // pnlCplBrake
             // 
-            this.pnlCplBrake.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive16;
+            this.pnlCplBrake.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCplBrake.BackgroundImage")));
             this.pnlCplBrake.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCplBrake.Location = new System.Drawing.Point(15, 219);
             this.pnlCplBrake.Name = "pnlCplBrake";
@@ -248,7 +249,7 @@
             // 
             // pnlCplFire
             // 
-            this.pnlCplFire.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive16;
+            this.pnlCplFire.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCplFire.BackgroundImage")));
             this.pnlCplFire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCplFire.Location = new System.Drawing.Point(15, 197);
             this.pnlCplFire.Name = "pnlCplFire";
@@ -549,7 +550,7 @@
             this.numWind.Size = new System.Drawing.Size(79, 20);
             this.numWind.TabIndex = 0;
             this.numWind.Value = new decimal(new int[] {
-            12,
+            20,
             0,
             0,
             0});
@@ -681,7 +682,7 @@
             // 
             // pnlSplitter
             // 
-            this.pnlSplitter.BackgroundImage = global::WFSystem.Properties.Resources.splitter;
+            this.pnlSplitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSplitter.BackgroundImage")));
             this.pnlSplitter.Location = new System.Drawing.Point(596, 47);
             this.pnlSplitter.Name = "pnlSplitter";
             this.pnlSplitter.Size = new System.Drawing.Size(3, 256);
@@ -689,7 +690,7 @@
             // 
             // pnlIndHeater
             // 
-            this.pnlIndHeater.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive;
+            this.pnlIndHeater.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlIndHeater.BackgroundImage")));
             this.pnlIndHeater.Location = new System.Drawing.Point(150, 227);
             this.pnlIndHeater.Name = "pnlIndHeater";
             this.pnlIndHeater.Size = new System.Drawing.Size(32, 32);
@@ -697,7 +698,7 @@
             // 
             // pnlIndBrake
             // 
-            this.pnlIndBrake.BackgroundImage = global::WFSystem.Properties.Resources.systeminactive;
+            this.pnlIndBrake.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlIndBrake.BackgroundImage")));
             this.pnlIndBrake.Location = new System.Drawing.Point(95, 107);
             this.pnlIndBrake.Name = "pnlIndBrake";
             this.pnlIndBrake.Size = new System.Drawing.Size(32, 32);
@@ -705,7 +706,7 @@
             // 
             // pnlGenerator
             // 
-            this.pnlGenerator.BackgroundImage = global::WFSystem.Properties.Resources.generator;
+            this.pnlGenerator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlGenerator.BackgroundImage")));
             this.pnlGenerator.Location = new System.Drawing.Point(382, 143);
             this.pnlGenerator.Name = "pnlGenerator";
             this.pnlGenerator.Size = new System.Drawing.Size(128, 128);
@@ -724,7 +725,7 @@
             // 
             // pnlWater
             // 
-            this.pnlWater.BackgroundImage = global::WFSystem.Properties.Resources.water3;
+            this.pnlWater.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlWater.BackgroundImage")));
             this.pnlWater.Location = new System.Drawing.Point(382, 44);
             this.pnlWater.Name = "pnlWater";
             this.pnlWater.Size = new System.Drawing.Size(128, 128);
@@ -732,7 +733,7 @@
             // 
             // pnlRotor
             // 
-            this.pnlRotor.BackgroundImage = global::WFSystem.Properties.Resources.blade0;
+            this.pnlRotor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlRotor.BackgroundImage")));
             this.pnlRotor.Location = new System.Drawing.Point(133, 96);
             this.pnlRotor.Name = "pnlRotor";
             this.pnlRotor.Size = new System.Drawing.Size(128, 128);
@@ -740,7 +741,7 @@
             // 
             // pnlCord
             // 
-            this.pnlCord.BackgroundImage = global::WFSystem.Properties.Resources.Connection;
+            this.pnlCord.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCord.BackgroundImage")));
             this.pnlCord.Location = new System.Drawing.Point(163, 47);
             this.pnlCord.Name = "pnlCord";
             this.pnlCord.Size = new System.Drawing.Size(256, 256);

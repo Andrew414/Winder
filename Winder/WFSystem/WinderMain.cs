@@ -24,6 +24,8 @@ namespace WFSystem
             state.generator.State = state.panel.State = state.rotor.State = sim.state = state;
 
             timer1_Tick(null, null);
+
+            numWind.BackColor = Color.FromArgb(255, 255, 160);
         }
 
         private void panel1_Click(object sender, EventArgs e)
@@ -132,6 +134,19 @@ namespace WFSystem
 
         private void numWind_ValueChanged(object sender, EventArgs e)
         {
+            if (numWind.Value > 20) // possible hurricane
+            {
+                numWind.BackColor = Color.FromArgb(255, 200, 200);
+            }
+            else if (numWind.Value > 11) // winder will increase speed
+            {
+                numWind.BackColor = Color.FromArgb(255, 255, 160);
+            }
+            else
+            {
+                numWind.BackColor = Color.White;
+            }
+
             sim.state.env.WindSpeedAvg = (double) numWind.Value;
         }
 
@@ -142,6 +157,14 @@ namespace WFSystem
 
         private void numTemp_ValueChanged(object sender, EventArgs e)
         {
+            if (numTemp.Value < 1)
+            {
+                numTemp.BackColor = Color.FromArgb(255, 255, 160);
+            }
+            else
+            {
+                numTemp.BackColor = Color.White;
+            }
             sim.state.env.Temperature = (double)numTemp.Value;
         }
 
