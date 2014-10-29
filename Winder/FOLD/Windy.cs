@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using WFSystem.WinderState;
 
-namespace WFSystem
+namespace FOLD
 {
-    public partial class WinderMain : Form
+    public partial class Windy : Form
     {
-        public WinderMain()
+        public Windy()
         {
             InitializeComponent();
             sim = new Simulator();
@@ -30,7 +28,7 @@ namespace WFSystem
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         int timerState = 0;
@@ -40,7 +38,7 @@ namespace WFSystem
         int defaulty = 143;
 
         Simulator sim;
-        
+
         void DrawStats()
         {
 
@@ -48,7 +46,7 @@ namespace WFSystem
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timerState ++ ;
+            timerState++;
             int animationState = timerState % 4;
 
             sim.DoOneStep();
@@ -61,7 +59,7 @@ namespace WFSystem
             // Draw rotor
             pnlRotor.BackgroundImage = Image.FromFile(@"..\..\img\blade" + animationState.ToString() + (sim.state.rotor.Active ? "" : "d") + ".png");
             lblRotorSpeed.Text = "ω = " + ((int)(60 * sim.state.rotor.speed)).ToString() + " оборотов в минуту";
-            lblOutdoorTemp.Text = "t = " + ((Math.Round(sim.state.rotor.temperature,1))).ToString() + " °C";
+            lblOutdoorTemp.Text = "t = " + ((Math.Round(sim.state.rotor.temperature, 1))).ToString() + " °C";
 
             pnlIndBrake.BackgroundImage = Image.FromFile(@"..\..\img\system" + (sim.state.rotor.brakeEnabled ? "" : "in") + "active.png");
             pnlIndHeater.BackgroundImage = Image.FromFile(@"..\..\img\system" + (sim.state.rotor.heaterEnabled ? "" : "in") + "active.png");
@@ -117,7 +115,7 @@ namespace WFSystem
 
         private void numWind_ValueChanged(object sender, EventArgs e)
         {
-            sim.state.env.WindSpeedAvg = (double) numWind.Value;
+            sim.state.env.WindSpeedAvg = (double)numWind.Value;
         }
 
         private void rbnN_CheckedChanged(object sender, EventArgs e)

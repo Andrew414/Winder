@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
-namespace WFSystem.WinderState
+namespace FOLD
 {
     class Rotor
     {

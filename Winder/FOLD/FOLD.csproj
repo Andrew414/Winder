@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F0A8EB7-477D-47B8-9AC7-94A28D3FDD66}</ProjectGuid>
+    <ProjectGuid>{7C7F1E50-0C23-4D50-90A6-D9ACCF33608F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WFSystem</RootNamespace>
-    <AssemblyName>WFSystem</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <RootNamespace>FOLD</RootNamespace>
+    <AssemblyName>FOLD</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,9 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -44,34 +40,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="ControlPanel.cs" />
     <Compile Include="Environment.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="WinderMain.cs">
+    <Compile Include="Generator.cs" />
+    <Compile Include="GlobalState.cs" />
+    <Compile Include="Rotor.cs" />
+    <Compile Include="Simulator.cs" />
+    <Compile Include="Windy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinderMain.Designer.cs">
-      <DependentUpon>WinderMain.cs</DependentUpon>
+    <Compile Include="Windy.Designer.cs">
+      <DependentUpon>Windy.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WinderState\Constants.cs" />
-    <Compile Include="WinderState\ControlPanel.cs" />
-    <Compile Include="WinderState\Generator.cs" />
-    <Compile Include="WinderState\Rotor.cs" />
-    <Compile Include="WinderState\GlobalState.cs" />
-    <Compile Include="WinderState\Simulator.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinderMain.resx">
-      <DependentUpon>WinderMain.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,9 +74,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="img\3mp_pol.gif" />
@@ -119,16 +109,73 @@
     <None Include="img\blade0.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\blade0d.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="img\blade1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade1d.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="img\blade2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\blade2d.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="img\blade3.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\blade3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Connection.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="img\generator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator0d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator1d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator2d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\splitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\systemactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\systemactive16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\systemalarm16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\systeminactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\systeminactive16.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="img\water0.png" />
@@ -141,30 +188,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\water3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\systemactive.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Connection.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\systemactive16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\systemalarm16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\systeminactive16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\systeminactive.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\splitter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

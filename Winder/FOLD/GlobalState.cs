@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
-namespace WFSystem
+namespace FOLD
 {
     class GlobalState
     {
@@ -21,9 +20,9 @@ namespace WFSystem
         }
 
         public Environment env = null;
-        public WFSystem.WinderState.Rotor rotor = null;
-        public WFSystem.WinderState.ControlPanel panel = null;
-        public WFSystem.WinderState.Generator generator = null;
+        public FOLD.Rotor rotor = null;
+        public FOLD.ControlPanel panel = null;
+        public FOLD.Generator generator = null;
 
     }
 }
