@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WFSystem</RootNamespace>
     <AssemblyName>WFSystem</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -34,14 +34,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Environment.cs" />
@@ -165,6 +159,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\splitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade0d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade1d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade2d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blade3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator0d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator1d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator2d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\generator3d.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
